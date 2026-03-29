@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Notas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>&#128218; Gestión de Notas del Curso</h1>
+        <p class="subtitle">Ingresa los datos de hasta <strong>10 alumnos</strong></p>
+
+
+        <!-- FORMULARIO -->
+        <div class="card formulario-card">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Ej: Carlos">
+            </div>
+
+            <div class="form-group">
+                <label for="c1">Certamen 1:</label>
+                <input type="number" id="c1" placeholder="0 - 100" min="0" max="100">
+            </div>
+
+            <div class="form-group">
+                <label for="c2">Certamen 2:</label>
+                <input type="number" id="c2" placeholder="0 - 100" min="0" max="100">
+            </div>
+
+            <div class="form-group">
+                <label for="c3">Certamen 3:</label>
+                <input type="number" id="c3" placeholder="0 - 100" min="0" max="100">
+            </div>
+
+            <!-- MENSAJE DE ERROR -->
+            <div id="mensaje-error" class="mensaje-error oculto"></div>
+
+            <button class="btn-agregar" id="btn-agregar" onclick="agregarAlumno()">
+                &#10133; Agregar Alumno
+            </button>
+
+            <button class="btn-calcular" id="btn-calcular" onclick="mostrarResultados()" disabled>
+                &#128202; Ver Resultados del Curso
+            </button>
+        </div>
+
+        <!-- RESULTADOS -->
+        <div id="resultados" class="oculto">
+            <div class="card resultados-card">
+                <h2>&#128202; Resultados del Curso</h2>
+                <div id="contenido-resultados"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
